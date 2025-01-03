@@ -26,3 +26,8 @@
    ```bash
    Please check you terminal for port value
    ```
+
+3. Test run:
+   ```bash
+   npm test
+   ```

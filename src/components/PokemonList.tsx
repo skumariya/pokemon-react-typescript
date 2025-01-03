@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Loader from "./Loader";
+import Card from "./Card";
 
 interface Pokemon {
   name: string;
@@ -149,19 +150,12 @@ const PokemonList: React.FC = () => {
       {/* Pokémon Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         {filteredPokemon.map((poke) => (
-          <div
+          <Card
             key={poke.id}
-            className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center"
-          >
-            <img src={poke.image} alt={poke.name} className="w-24 h-24 mb-4" />
-            <h2 className="text-lg font-semibold capitalize">{poke.name}</h2>
-            <Link
-              to={`/pokemon/${poke.id}`}
-              className="text-blue-500 hover:underline mt-2"
-            >
-              View Details →
-            </Link>
-          </div>
+            name={poke.name}
+            image={poke.image}
+            detailsLink={`/pokemon/${poke.id}`}
+          />
         ))}
       </div>
 
