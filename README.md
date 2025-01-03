@@ -23,6 +23,6 @@
    ```
 2. Open your browser and navigate to `http://localhost:XXXX` to see the application running.
 
-```XXXX : Please use the port value shown in the terminal
-
-```
+   ```bash
+   Please check you terminal for port value
+   ```
